@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         if(item.getItemId() == R.id.load){
+            EditText text = (EditText) findViewById(R.id.write);
             try
             {
                 FileReader fr = new FileReader(Environment.getExternalStorageDirectory().getAbsolutePath() + "/data.txt");
@@ -61,8 +62,10 @@ public class MainActivity extends AppCompatActivity {
                 {
                     wholeFile = wholeFile + line + "\n";
                 }
-                
+
                 reader.close();
+                //set a text to EditText
+                text.setText(wholeFile);
 
             }
             catch(IOException e)
