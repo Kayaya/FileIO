@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
             try
             {
                 PrintWriter pw =
-                        new PrintWriter( new FileWriter(Environment.getExternalStorageDirectory().getAbsolutePath() +"/data.txt"));
+                        new PrintWriter( new FileWriter(Environment.getExternalStorageDirectory().getAbsolutePath() +"/data.txt", true));
 
                 EditText text = (EditText) findViewById(R.id.write);
 
